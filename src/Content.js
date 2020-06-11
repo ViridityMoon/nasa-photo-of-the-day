@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { BASE_URL } from './Constants'
+import React from 'react';
+import Container from './Container'
 
 function Content ({data}) {
     return(
-    <div>
-        <img src = {data.url} alt='nasaPhoto'></img>
-        <h3>{data.title} - {data.copyright}</h3>
-        <p>{data.explanation}</p>
-    </div>
+    <section className = 'content'>
+        <Container >
+            <img src = {data.url} alt='nasaPhoto'></img>
+            <h3>{data.title} - {data.copyright}</h3>
+            <p>{data.explanation}</p>
+        </Container>
+    </section>
     );
 }
 

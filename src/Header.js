@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BASE_URL } from './Constants'
-import Content from './Content'
+import { BASE_URL } from './Constants';
+import Content from './Content';
+import Container from './Container';
 
 function Header () {
     const [data, setData] = useState({});
@@ -18,13 +19,13 @@ function Header () {
           }, []);
     
     return (
-        <div>
+        <Container>
             <header>
                 <h1>NASA Photo of the Day</h1>
                 <h2>Date: {data.date}</h2>
             </header>
             <Content data = {data} />
-        </div>
+        </Container>
     );
 }
 
